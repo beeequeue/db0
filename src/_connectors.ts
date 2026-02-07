@@ -14,9 +14,8 @@ import type { ConnectorOptions as NodeSQLiteOptions } from "db0/connectors/node-
 import type { ConnectorOptions as PgliteOptions } from "db0/connectors/pglite";
 import type { ConnectorOptions as PlanetscaleOptions } from "db0/connectors/planetscale";
 import type { ConnectorOptions as PostgreSQLOptions } from "db0/connectors/postgresql";
-import type { ConnectorOptions as SQLite3Options } from "db0/connectors/sqlite3";
 
-export type ConnectorName = "better-sqlite3" | "bun-sqlite" | "bun" | "cloudflare-d1" | "cloudflare-hyperdrive-mysql" | "cloudflare-hyperdrive-postgresql" | "libsql-core" | "libsql-http" | "libsql-node" | "libsql" | "libsql-web" | "mysql2" | "node-sqlite" | "sqlite" | "pglite" | "planetscale" | "postgresql" | "sqlite3";
+export type ConnectorName = "better-sqlite3" | "bun-sqlite" | "bun" | "cloudflare-d1" | "cloudflare-hyperdrive-mysql" | "cloudflare-hyperdrive-postgresql" | "libsql-core" | "libsql-http" | "libsql-node" | "libsql" | "libsql-web" | "mysql2" | "node-sqlite" | "sqlite" | "pglite" | "planetscale" | "postgresql";
 
 export type ConnectorOptions = {
   "better-sqlite3": BetterSQLite3Options;
@@ -39,7 +38,6 @@ export type ConnectorOptions = {
   "pglite": PgliteOptions;
   "planetscale": PlanetscaleOptions;
   "postgresql": PostgreSQLOptions;
-  "sqlite3": SQLite3Options;
 };
 
 export const connectors: Record<ConnectorName, string> = Object.freeze({
@@ -63,5 +61,4 @@ export const connectors: Record<ConnectorName, string> = Object.freeze({
   "pglite": "db0/connectors/pglite",
   "planetscale": "db0/connectors/planetscale",
   "postgresql": "db0/connectors/postgresql",
-  "sqlite3": "db0/connectors/sqlite3",
 } as const);

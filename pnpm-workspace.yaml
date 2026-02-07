@@ -1,2 +1,8 @@
 packages:
   - "examples/**"
+
+allowBuilds:
+  "@parcel/watcher": false
+  better-sqlite: true
+  esbuild: true
+  es5-ext: false
